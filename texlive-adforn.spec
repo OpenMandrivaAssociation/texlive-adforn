@@ -1,5 +1,5 @@
 Name:		texlive-adforn
-Version:	1.001.b.2
+Version:	1.001-b.2
 Release:	1
 Summary:	OrnementsADF font with TeX/LaTeX support
 Group:		Publishing
@@ -27,11 +27,13 @@ README, manifest.txt.).
     %_texmf_mktexlsr_post
 
 %preun
-    %_texmf_mktexlsr_preun
+    if [ $1 -eq 0 ]; then
+	%_texmf_mktexlsr_pre
+    fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mltexlsr_post
+	%_texmf_mktexlsr_post
     fi
 
 #-----------------------------------------------------------------------
