@@ -1,5 +1,11 @@
+# revision 20019
+# category Package
+# catalog-ctan /fonts/adforn
+# catalog-date 2010-10-06 08:49:34 +0200
+# catalog-license lppl
+# catalog-version 1.001-b-2
 Name:		texlive-adforn
-Version:	1.001-b.2
+Version:	1.001b2
 Release:	1
 Summary:	OrnementsADF font with TeX/LaTeX support
 Group:		Publishing
@@ -52,6 +58,7 @@ README, manifest.txt.).
 %doc %{_texmfdistdir}/doc/fonts/adforn/adforn.pdf
 %doc %{_texmfdistdir}/doc/fonts/adforn/adforn.tex
 %doc %{_texmfdistdir}/doc/fonts/adforn/manifest.txt
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,3 +69,5 @@ README, manifest.txt.).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
