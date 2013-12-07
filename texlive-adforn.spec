@@ -6,7 +6,7 @@
 # catalog-version 1.001-b-2
 Name:		texlive-adforn
 Version:	1.001b2
-Release:	4
+Release:	5
 Summary:	OrnementsADF font with TeX/LaTeX support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/adforn
