@@ -1,18 +1,12 @@
-# revision 20019
-# category Package
-# catalog-ctan /fonts/adforn
-# catalog-date 2010-10-06 08:49:34 +0200
-# catalog-license lppl
-# catalog-version 1.001-b-2
 Name:		texlive-adforn
-Version:	1.001b2
-Release:	11
+Version:	54512
+Release:	1
 Summary:	OrnementsADF font with TeX/LaTeX support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/adforn
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adforn.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adforn.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adforn.r54512.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adforn.doc.r54512.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ README.) The TeX/LaTeX support is licensed under LPPL. (See
 README, manifest.txt.).
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -52,25 +46,10 @@ README, manifest.txt.).
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.001b2-2
-+ Revision: 749085
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.001b2-1
-+ Revision: 717793
-- texlive-adforn
-- texlive-adforn
-- texlive-adforn
-- texlive-adforn
-- texlive-adforn
-
