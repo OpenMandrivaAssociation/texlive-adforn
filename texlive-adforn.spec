@@ -34,7 +34,6 @@ fi
 %{_texmfdistdir}/fonts/map/dvips/adforn/OrnementsADF.map
 %{_texmfdistdir}/fonts/tfm/arkandis/adforn/OrnementsADF.tfm
 %{_texmfdistdir}/fonts/type1/arkandis/adforn/OrnementsADF.pfb
-%{_texmfdistdir}/fonts/type1/arkandis/adforn/OrnementsADF.pfm
 %{_texmfdistdir}/tex/latex/adforn/adforn.sty
 %{_texmfdistdir}/tex/latex/adforn/uornementsadf.fd
 %doc %{_texmfdistdir}/doc/fonts/adforn/COPYING
